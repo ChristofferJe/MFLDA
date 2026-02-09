@@ -17,3 +17,9 @@ The below example is used to call MFLDA with 7 features, 9 signatures, 700 itera
 ```Rscript MCLDA_with_CV.R 1,2,3,4,5,7,11,12 9 700 20 results 5```
 
 `MFLDA_with_CV.R` further requires the path to the data. This is defined in the script in line 14. It expects the data to be a table in a tsv file with each row representing a mutation, the first column being unique patient IDs and the remaning columns to be the features of the mutations. If the features in the dataset differ from the ones in the dataset from the article the discretization step in the data preprocessing needs to be changed accordingly. 
+
+
+SPØRGSMÅL??
+1. Skal det script der vise hvordan jeg har fundet significant sammenhæng mellem funde signaturer og driver mutationer/cancer typer også med?
+2. Vil det ikke kræve at vi også har data med, da det er meget specifikt for den data vi har tilgængelig? Ellers skal der i hvertfald nok skrives lidt om i koden.
+3. Skal vi have data med? Ellers skal jeg nok skrive lidt mere specifikt hvilke features vi havde i vores data. 
