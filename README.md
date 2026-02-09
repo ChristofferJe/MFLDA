@@ -2,7 +2,7 @@
 Detecting Patterns of Somatic Structural Variation Using Multi-Feature Latent Dirichlet Allocation (MFLDA) 
 
 The `MFLDA_with_CV.R` script uses the `cmdstanr` package to sample from the posteior as defined in the stan script `MFLDA_7F.stan`. The posterior in `MFLDA_7F.stan` is defined as the posterior of the MFLDA model with 7 features (i.e. mutation type, length, cluster, telomere distance, replication time, fragile
-site and LINE) as presented in the article. The number of features can be changed by chaning the stan script. `MFLDA_with_CV.R` returns a summary containing the summary statistics from the MCMC sampling (e.g. posterior mean, rhat, ess, etc.) for each parameter. 
+site and LINE) as presented in the article. The number of features can be changed by chaning the stan script. `MFLDA_with_CV.R` returns a summary containing the summary statistics from the MCMC sampling (e.g. posterior mean, rhat, ess, etc.) for each parameter. It further saves a list of the arguments used for the specific sample and the model object. 
 
 `MFLDA_with_CV.R` takes multiple arguments when called.
 1. First the selected features needs to be defined. Here, these are given as their corresponding column number in the dataset seperated by comma. OBS. you always have to select column 1, this is expected to be the sample id and is used in the model fit.
