@@ -14,6 +14,6 @@ site and LINE) as presented in the article. The number of features can be change
 
 The below example is used to call MFLDA with seven features, 9 signatures, 700 iterations, 20 refresh rate, "results" as results subfolder, and 5 bins
 
-```Rscript MCLDA_with_CV.R 1,2,3,4,5,7,11,12 $i 700 20 results 5```
+```Rscript MCLDA_with_CV.R 1,2,3,4,5,7,11,12 9 700 20 results 5```
 
 `MFLDA_with_CV.R` further requires the path to the data. This is defined in the script in line 14. It expects the data to be a table in a tsv file with each row representing a mutation, the first column being unique patient IDs and the remaning columns to be the features of the mutations. If the features in the dataset differ from the ones in the dataset from the article the discretization step in the data preprocessing needs to be changed accordingly. 
