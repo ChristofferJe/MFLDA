@@ -262,8 +262,7 @@ args_list = list(var_select = var_select,
 
 # Making function to generate paths
 generate_path <- function(type, folder, var_select, K, iterations){
-  path <- "../../results_v2/"
-  path <- paste0(path, folder)
+  path <- folder
   path <- paste0(path, "/")
   path <- paste0(path, type)
   path <- paste0(path, "_var-")
@@ -290,4 +289,5 @@ path_to_model = paste0(path_to_model, ".RDS")
 write.csv(summ, paste0(path_to_summary, ".csv"))
 saveRDS(args_list, paste0(path_to_arguments, ".Rdata"))
 fit$save_object(file = path_to_model)
+
 
